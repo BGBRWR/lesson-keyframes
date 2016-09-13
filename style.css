@@ -1,0 +1,58 @@
+body{
+  overflow-x: hidden;
+
+}
+
+img{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+.frame{
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  border: solid 1em brown;
+}
+.wave-container {
+  height: 100vh;
+  background-image: url('./img/great_wave_background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  /*overflow-y: hidden;*/
+}
+
+.backwave{
+  position: absolute;
+  bottom: 0vh;
+  animation: backWaves 5s infinite;
+  z-index: -1;
+    /*overflow-y: hidden;*/
+}
+
+.frontwave{
+  position: absolute;
+  bottom: 0;
+  animation: frontWaves 5s infinite;
+  z-index: -1;
+
+}
+
+
+@keyframes backWaves {
+  0% {top: 30px}
+  50% {top: 20px}
+  100% {top: 30px}
+}
+
+@keyframes frontWaves {
+  0% {top: 0px}
+  50% {top: 10px}
+  100% {top: 0px}
+}
